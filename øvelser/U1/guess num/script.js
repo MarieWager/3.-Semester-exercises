@@ -12,7 +12,7 @@ function checkInput() {
     if (inputNumber < randomNumber) {
       /*less than*/
       document.getElementById("result").innerHTML = inputNumber + " er for lavt, prøv igen";
-      document.getElementById("input").value = "";
+      document.getElementById("input").value = ""; /*nulstiller input*/
     } else if (inputNumber > randomNumber) {
       /*higher than*/
       document.getElementById("result").innerHTML = inputNumber + " er for højt, prøv igen";
@@ -31,7 +31,7 @@ function checkInput() {
         { once: true }
       );
 
-      /*nulstiller input og generere nyt tal - så man a´kan spille igen*/
+      /*nulstiller og generere nyt tal - så man a´kan spille igen*/
       randomNumber = Math.floor(Math.random() * heighestNumber);
       document.getElementById("input").value = "";
       console.log(randomNumber);
@@ -48,3 +48,50 @@ document.getElementById("input").addEventListener("keyup", function (e) {
     checkInput();
   }
 });
+
+/* HVAD DER BLEV VIST I UNDERVISNINGEN */
+/***
+"use strict";
+
+const btn = document.querySelector("button")
+
+const input = document.querySelector("input")
+
+const h2 = document.querySelector("h2")
+
+** man kan hard-code tallet **
+const computerNum = Math.floor(Math.random()*100)+1;
+
+** dette behøves ikke - istedet kan det tilføjes
+'const' foran 'brugerGuess = input.value;' på linje 72 **
+let brugerGuess ;
+
+** tilføjer en funtion til knappen **
+btn.addEventListener("click",klik_btn)
+funtion klik_btn() {
+
+brugerGuess = input.value;
+
+console.log("KLIK", computerNum)
+** 'if' = hvis det ikke er det her, så kan det være 'else if',
+   hvis det er hverken af de to må det være 'else' (altså det rigtige resultat),
+   derfor "behøves" der heller ikke at skrives noget i paranteserne efter 'else'
+**
+  
+if (brugerGuess<computerNum){
+  feedbackText="Det er for lavt prøv igen"}
+
+  else if(brugerGuess>computerNum){
+  feedbackText="Det er for højt prøv igen"}
+
+  else{
+    feedbackText="Du har gættet rigtigt"}
+
+** nu til at få feedbackText ud på frontface **
+h2.textContent = feecbacktext
+console.log(feedbackText)
+
+}
+ 
+ 
+***/
