@@ -61,7 +61,7 @@ function animationStart() {
   player1.addEventListener("animationend", animationEnd, { once: true });
 
   player2.classList.add("shake");
-  player2.addEventListener("animationend", animationEnd);
+  player2.addEventListener("animationend", animationEnd); //kan evt undlades, da spillet "kun behøver" at lytte efter player1 altså userChoice
 }
 
 function animationEnd() {
@@ -70,7 +70,6 @@ function animationEnd() {
   /** fjerner også tegn, ellers bliver det samme vist igen og igen **/
 
   player1.classList.remove("shake", "rock", "paper", "scissors");
-
   player1.classList.add(userChoice);
 
   player2.classList.remove("shake", "rock", "paper", "scissors");
@@ -95,7 +94,7 @@ function showResultScreen() {
     drawScreen.classList.remove("hidden");
   }
 
-  //nedenstående kan itteres og gøres mere kompakt = færre linjer - hvis jeg orker
+  //nedenstående kan itteres og gøres mere kompakt = færre linjer - hvis jeg orker (billede-eksempel anno 28/8)
 
   /** vinder herunder **/
   if (userChoice === "rock" && computerChoice === "scissors") {
@@ -140,3 +139,29 @@ function resetGame() {
 
 //computerChoice's hånd stemmer ikke hele tiden oversens med hvad der står i konsol
 //dog bliver userChoice vist korrekt og dermed virker spillet ellers
+
+//// NOTER FRA TIMEM ////
+// alt skal jo gerne stemme overens - skulle det ske at noget i css-filen ændres vil js være skrøbeligt og muligvis ikke virke
+// derfor vil if-sætninger evt kunne rede ens røv (du har et billede som eksempel anno 28/8)
+
+//HUSK at at skive det der står i "" med småt - og at det stemmer overens med css og hmtl
+
+// Alberte prøvede at lavede en funtion til player1/user hvis man skulle vinde
+// Hertil vil man kunne bruge return og value i if-statements
+// Tanya her som mig draw først i en if-sætning
+// dernæst har hun en else if - hvor hun skriver:
+/* if (userChoice === computerChoice) {
+   console.log("Uafgjort");
+    drawScreen.classList.remove("hidden");
+  } else if (
+   (userChoice === "rock" && computerChoice === "scissors") || 
+   (userChoice === "paper" && computerChoice === "rock") || 
+   (userChoice === "scissors" && computerChoice === "paper")
+){ //her tilføjer hun win-skærm
+ console.log("Du vinder");
+    winScreen.classList.remove("hidden");
+   } else { //der behøves kun ellers til for de resterende 3 udkom da de alle ender i at user taber
+      console.log("Du taber");
+    loseScreen.classList.remove("hidden");
+      }
+*/
