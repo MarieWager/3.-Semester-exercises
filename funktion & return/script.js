@@ -29,6 +29,8 @@ console.log(txt);*/
   return Math.floor(Math.random() * max);
 }*/
 
+getRandomNum;
+
 const myRandomNum = getRandomNum(100);
 
 console.log("getRandomNum fra 0 til 100 ", myRandomNum);
