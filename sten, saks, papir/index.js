@@ -97,6 +97,9 @@ function showResultScreen() {
   //nedenstående kan itteres og gøres mere kompakt = færre linjer - hvis jeg orker (billede-eksempel anno 28/8)
 
   /** vinder herunder **/
+  // kan laves til else if statement efter if-draw-statement
+  // der kan bruges: || til at skrive flere instanster/muligheder
+  // for at vinde i træk i samme if-statement, som Tanya gjorde
   if (userChoice === "rock" && computerChoice === "scissors") {
     console.log("Du vinder");
     winScreen.classList.remove("hidden");
@@ -111,6 +114,9 @@ function showResultScreen() {
   }
 
   /** taber herunder**/
+  // kan laves til else statement efter vinderes else if statement,
+  // da hvis man ikke er uafgjort eller vinder så taber man
+  // dertil vil det ikke være "nødvendigt" at skrive instanserne/mulighederne for at tabe
   if (userChoice === "rock" && computerChoice === "paper") {
     console.log("Du taber");
     loseScreen.classList.remove("hidden");
@@ -148,6 +154,7 @@ function resetGame() {
 
 // Alberte prøvede at lavede en funtion til player1/user hvis man skulle vinde
 // Hertil vil man kunne bruge return og value i if-statements
+
 // Tanya her som mig draw først i en if-sætning
 // dernæst har hun en else if - hvor hun skriver:
 /* if (userChoice === computerChoice) {

@@ -1,9 +1,9 @@
 "use strict";
 
 //computerens gæt (1-100)
-let minNum = 1;
-let maxNum = 100;
-let computerNumber;
+let minNum = 1; //laveste tal der kan gættes
+let maxNum = 100; //højeste tal der kan gættes
+let computerNumber; //tallet der gættes
 
 //const til knapper
 const btnStart = document.querySelector("#start");
@@ -66,4 +66,13 @@ btnCorrect.addEventListener("click", klik_btnCorrect); //ved dette klik "vinder"
 function klik_btnCorrect() {
   console.log("Computerens gæt var for korrekt", computerNumber);
   document.getElementById("number").innerHTML = "" + computerNumber + " og det var rigtigt!!!";
+
+  // Start konfetti-animation //som der står i html, det er fra chat - ville blot se hvordan det kunne se ud
+  confetti({
+    particleCount: 150, // antal partikler
+    spread: 80, // hvor bredt de spredes
+    origin: { y: 0.6 }, // hvorfra på skærmen (0 = top, 1 = bund)
+  });
 }
+
+/// LEKTION-NOTER - disable/inaktive knapper ///
