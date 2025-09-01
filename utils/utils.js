@@ -40,4 +40,18 @@ export function EnterReload() {
     }
   });
 }
+
+// klik på - for reload
+export function reload() {
+  let lastKeyTime = 0; // tid for sidste tastetryk
+  const doubleKeyDelay = 300; // maks ms mellem tryk for at tælle som "dobbelttryk"
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "-") {
+      //e.preventDefault(); // stopper fx form-submit
+      window.location.reload();
+    }
+  });
+}
+
 //Arrays ?

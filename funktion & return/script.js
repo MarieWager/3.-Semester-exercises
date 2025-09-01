@@ -1,5 +1,5 @@
 "use strict";
-import { getRandomNum } from "../utils/utils";
+import { getRandomNum } from "../utils/utils.js";
 
 //#1
 
