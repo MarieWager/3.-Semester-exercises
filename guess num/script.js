@@ -1,3 +1,4 @@
+import { EnterInput } from "../utils/utils.js"; //Husk.js til sidst
 const heighestNumber = 100;
 let randomNumber = Math.floor(Math.random() * heighestNumber);
 document.getElementById("number").innerHTML = heighestNumber;
@@ -42,12 +43,14 @@ function checkInput() {
   }
 }
 
-/*således kan Enter-knappen bruges, istedet for selve knappen*/
+/*således kan Enter-knappen bruges, istedet for selve knappen
 document.getElementById("input").addEventListener("keyup", function (e) {
   if (e.key == "Enter") {
     checkInput();
   }
-});
+});*/
+//Fra utils:
+EnterInput(checkInput);
 
 /* HVAD DER BLEV VIST I UNDERVISNINGEN */
 /***
