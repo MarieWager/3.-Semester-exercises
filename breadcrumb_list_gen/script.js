@@ -31,8 +31,8 @@ function klik() {
       str += `<li>/<a href="">${elm.name}</a></li>`; // += er konkatinering
     }
 
-    /// STYLING ??? ///
-    //bc.elm.name.style("---color", `rgb(0,0,0)`);
+    /// STYLING ///
+    bc.elm.name.style("---color", `rgb(0,0,0)`);
   });
   //console.log(str);
   //henter "ul" fra html'en og sætter det til at være str

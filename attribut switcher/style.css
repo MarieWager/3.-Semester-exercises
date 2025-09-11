@@ -1,0 +1,13 @@
+[data-filter="fox"] {
+  --bg-color: orange;
+  color: black;
+}
+
+[data-filter="bat"] {
+  --bg-color: black;
+  color: beige;
+}
+
+h1 {
+  background-color: var(--bg-color); /*baggrundsfarve-variablerne ovenfor udskiftes*/
+}
