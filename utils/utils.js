@@ -13,7 +13,7 @@ export function $(str) {
 
 //knapper?
 
-//Enable enter button via click
+//Enable keyboard-enter button
 //Enter knap fra tidligere:
 /*således kan Enter-knappen bruges, istedet for selve knappen
 document.getElementById("input").addEventListener("keyup", function (e) {
@@ -23,8 +23,8 @@ document.getElementById("input").addEventListener("keyup", function (e) {
 });*/
 //Enter funktion til input-felt (callback = Keyboard Enter bliver trykket -> kør kaldt function)
 export function EnterInput(callback) {
-  const input = document.getElementById("input");
-  input.addEventListener("keydown", (e) => {
+  const inputEnterClick = document.querySelector(".enter-click");
+  inputEnterClick.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
       callback(); // Kald den funktion vi sender ind
     }

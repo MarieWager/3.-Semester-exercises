@@ -1,0 +1,11 @@
+ul li {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+input[type="checkBox"] {
+  color: aqua;
+  background-color: blue;
+  border-color: blueviolet;
+}

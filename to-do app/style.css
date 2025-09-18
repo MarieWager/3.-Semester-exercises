@@ -1,0 +1,237 @@
+body {
+  margin: 0;
+  height: 100%;
+  background-color: var(--b);
+  font-family: "Darumadrop One", serif;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 2fr 0.5fr;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--e);
+  color: var(--f);
+  padding-left: 17%;
+  padding-right: 2px;
+  border-radius: 0 0px 60px 60px;
+}
+
+h1 {
+  place-self: center;
+  color: var(--f);
+  padding: 7px;
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+h3 {
+  padding: 0;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+select {
+  cursor: pointer;
+  background-color: var(--b);
+  color: var(--f);
+  border-style: none;
+  border-radius: 40px;
+  padding: 7px;
+  margin-right: 5vw;
+  font-family: "Darumadrop One", serif;
+}
+
+select option {
+  background-color: var(--a);
+  color: var(--e);
+  font-family: "Darumadrop One", serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#box1 {
+  place-self: center;
+  align-items: center;
+  background-color: var(--a);
+  color: var(--f); /*text color*/
+  margin: 20px;
+  padding: 40px;
+  border-radius: 50px;
+}
+
+#box2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/*** LIST & ELEMENTS ****/
+#listContainer {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+#listContainer h2 {
+  margin: 0;
+  margin-bottom: 0;
+  line-height: 1;
+  font-size: 22px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  font-family: "Sulphur Point", serif;
+}
+
+#done-list h3 {
+  color: var(--d);
+  text-decoration: line-through;
+  text-decoration-thickness: 1.7px;
+  text-decoration-color: var(--f);
+}
+
+li {
+  margin-top: -20px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 0.5fr 3fr 0.5fr 0.5fr;
+  align-items: center;
+  gap: 7px;
+  list-style: none;
+}
+
+/*** BUTTONS ****/
+#resetBtn,
+#faveBtn {
+  cursor: pointer;
+  background-color: var(--c);
+  color: var(--f);
+  border-style: none;
+  border-radius: 40px;
+  padding: 7px;
+  font-family: "Darumadrop One", serif;
+}
+
+#addBtn {
+  cursor: pointer;
+  background-color: var(--c);
+  color: var(--f);
+  border-style: none;
+  border-radius: 40px;
+  width: 55px;
+  padding: 7px;
+  align-items: center;
+  justify-content: center;
+  font-family: "Darumadrop One", serif;
+}
+
+.starBtn {
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--c);
+  border-style: none;
+  font-size: 32px;
+  margin-bottom: 6px;
+}
+
+.removeBtn {
+  cursor: pointer;
+  background-color: var(--c);
+  color: var(--f);
+  border-style: none;
+  outline: 2px solid var(--c);
+  border-radius: 2px;
+  font-size: 18px;
+  font-weight: bolder;
+  width: 20px;
+  padding-bottom: 7px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Darumadrop One", serif;
+}
+
+/***  HOVER for BUTTONS  ***/
+#resetBtn:hover,
+#faveBtn:hover,
+#addBtn:hover {
+  background-color: var(--d);
+  color: var(--b);
+  transform: scale(1.05);
+  transition: 0.2s ease-in-out;
+}
+
+.removeBtn:hover {
+  background-color: var(--d);
+  color: var(--b);
+  border-style: none;
+  outline: 2px solid var(--d);
+  transition: 0.2s ease-in-out;
+}
+
+/*** INPUT ****/
+#task-input {
+  cursor: pointer;
+  background-color: white;
+  color: var(--f);
+  border-style: none;
+  border-radius: 40px;
+  width: 250px;
+  padding: 5px;
+  margin-right: -55px;
+  font-family: "Sulphur Point", serif;
+}
+#task-input:focus {
+  outline: 2px solid var(--c);
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--f);
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+/* when checked */
+input[type="checkbox"]:checked {
+  accent-color: var(--c);
+}
+
+/*** FILTERS ****/
+[data-filter="kiwi"] {
+  --a: #e6f9e0;
+  --b: #b8e6a0;
+  --c: #7cc24a;
+  --d: #4d8f2a;
+  --e: #2a5c15;
+  --f: #1a3b0a;
+}
+
+[data-filter="blueberry"] {
+  --a: #e0ebf8;
+  --b: #a3c1e3;
+  --c: #6a5acd;
+  --d: #4b0082;
+  --e: #2e2a66;
+  --f: #1a1b41;
+}
+
+[data-filter="strawberry"] {
+  --a: #ffe5e0;
+  --b: #ffb3a7;
+  --c: #ff6f61;
+  --d: #e63946;
+  --e: #b22222;
+  --f: #8b0000;
+}

@@ -1,0 +1,19 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f5f5f5;
+  font-family: sans-serif;
+}
+
+.number {
+  font-size: 4rem;
+  font-weight: bold;
+  transition: transform 1.5s ease;
+}
+
+/* class der får tallet til at "poppe" */
+.number.pop {
+  transform: scale(1.4);
+}

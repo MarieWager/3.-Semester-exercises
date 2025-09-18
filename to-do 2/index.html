@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do 2</title>
+    <style>
+        #box1 {
+            background-color: lightblue;
+            padding: 20px;
+            border-radius: 20px;
+            margin: 2rem;
+        }
+
+        #content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        #box2,
+        #box3 {
+            display: grid;
+            grid-template-columns: 1fr;
+            width: auto;
+            padding: 1rem;
+        }
+
+        li {
+            display: flex;
+        }
+
+        ul {
+            border-color: blue;
+            border-style: dashed;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1">
+        <h1>To do 2</h1>
+
+        <input type="text" name="" id="todo_input">
+        <button type="submit" id="submit">Submit</button>
+
+        <div id="content">
+            <div id="box2">
+                <h2>To do</h2>
+                <ul id="todo_container"> </ul>
+            </div>
+            <div id="box3">
+                <h2>Done</h2>
+                <ul id="done_container"></ul>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
